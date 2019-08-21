@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">CarPark</string>
     <string name="title">Car Park</string>
+    <string name="header">Car Information</string>
+    <string name="what_is_your_no">What is your No?</string>
+    <string name="what_is_your_brand">What is your Brand?</string>
+    <string name="what_is_your_name">What is your Name?</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>

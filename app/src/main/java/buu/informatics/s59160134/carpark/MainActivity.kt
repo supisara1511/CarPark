@@ -8,9 +8,13 @@ import buu.informatics.s59160134.carpark.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val carInfo1: CarInfo = CarInfo("","","","ว่าง")
+    private val carInfo2: CarInfo = CarInfo("","","","ว่าง")
+    private val carInfo3: CarInfo = CarInfo("","","","ว่าง")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.carInfo1 = carInfo1
+        binding.carInfo2 = carInfo2
+        binding.carInfo3 = carInfo3
     }
 }
