@@ -36,24 +36,24 @@ class MainActivity : AppCompatActivity() {
         val update = binding.updateButton
         boxOneText.setOnClickListener {
             value = 1
-            showdetail(value)
+            showdetail(it)
         }
         boxTwoText.setOnClickListener {
             value = 2
-            showdetail(value)
+            showdetail(it)
         }
         boxThreeText.setOnClickListener {
             value = 3
-            showdetail(value)
+            showdetail(it)
         }
         delete.setOnClickListener {
             deletedData(value)
-            showdetail(value)
+            showdetail(it)
 
         }
         update.setOnClickListener {
             updateData(value)
-            showdetail(value)
+            showdetail(it)
 
         }
     }
@@ -84,23 +84,21 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun showdetail(valueNow : Int) {
+    private fun showdetail(view: View) {
         binding.apply {
-            value_now_text.text = value.toString()
+            headerText.text = "Slot : " + value
             headerText.visibility = View.VISIBLE
-            valueNowText.visibility = View.VISIBLE
             noEdit.visibility = View.VISIBLE
             brandEdit.visibility = View.VISIBLE
             nameEdit.visibility = View.VISIBLE
             deleteButton.visibility = View.VISIBLE
             updateButton.visibility = View.VISIBLE
-//            pleaseSelectSlotText.visibility = View.GONE
-            if (valueNow == 1) {
+            if (value == 1) {
                 noEdit.setText(carInfo1?.no)
                 brandEdit.setText(carInfo1?.brand)
                 nameEdit.setText(carInfo1?.name)
             }
-            else if (valueNow == 2) {
+            else if (value == 2) {
                 noEdit.setText(carInfo2?.no)
                 brandEdit.setText(carInfo2?.brand)
                 nameEdit.setText(carInfo2?.name)
@@ -116,7 +114,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateData(valueNow : Int) {
         binding.apply {
-            value_now_text.text = valueNow.toString()
             if (valueNow == 1) {
                 carInfo1?.no = noEdit.text.toString()
                 carInfo1?.brand = brandEdit.text.toString()
