@@ -86,7 +86,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun showdetail(valueNow : Int) {
         binding.apply {
-            value_now_text.text = valueNow.toString()
+            value_now_text.text = value.toString()
+            headerText.visibility = View.VISIBLE
+            valueNowText.visibility = View.VISIBLE
+            noEdit.visibility = View.VISIBLE
+            brandEdit.visibility = View.VISIBLE
+            nameEdit.visibility = View.VISIBLE
+            deleteButton.visibility = View.VISIBLE
+            updateButton.visibility = View.VISIBLE
+//            pleaseSelectSlotText.visibility = View.GONE
             if (valueNow == 1) {
                 noEdit.setText(carInfo1?.no)
                 brandEdit.setText(carInfo1?.brand)
